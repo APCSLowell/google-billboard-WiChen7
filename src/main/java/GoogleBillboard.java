@@ -5,11 +5,28 @@ public class GoogleBillboard {
 	public static void main(final String[] args) {
 		System.out.println("Replace this string with your answer!");
 	}
-	
+	for (int i = 0; i < e.length()-10; i++) {
+    String digits = e.substring(i, i+10);
+    double dNum = Double.parseDouble(digits);
+    if (isPrime(dNum) == true) {
+      System.out.println(dNum);
+    }
+  }
 
 	//Finish this function
-	public boolean isPrime(double d){
-	}
+	public static boolean isPrime(double dNum)  
+{   
+  if (dNum < 2.0) {
+    return false;
+  }
+  for (int i = 2; i <= Math.sqrt(dNum); i++) {
+    if (dNum%i == 0) {
+      return false;
+    }
+  }
+  //your code here   
+  return true;
+} 
 
 }
 
